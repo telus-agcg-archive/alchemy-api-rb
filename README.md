@@ -1,6 +1,6 @@
-# Alchemy::Api::Rb
+# AlchemyAPI
 
-TODO: Write a gem description
+This is a ruby client library that provides access to the Alechemy text mining API. The initial version targets the keyword extraction api specificaly, with other implementations to follow.
 
 ## Installation
 
@@ -18,7 +18,22 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Create a client instances with your API Key:
+
+    @client = AlchemyAPI::KeywordExtraction.new("xxxxxxxxxxxxxxxxxx")
+
+Request keyword extraction for a string of text:
+
+    results = @client.text_search("lorem ipsum")
+
+Results are returned as a array of keywords extracted:
+
+    [
+      {
+             "text" => "lorem ipsum",
+        "relevance" => "0.993164"
+      }
+    ]
 
 ## Contributing
 
