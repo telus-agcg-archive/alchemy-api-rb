@@ -18,9 +18,21 @@ describe AlchemyAPI::KeywordExtraction do
     end
 
     it "returns a an array of results" do
-      result = subject.text_search("lorem ipsum")
+      VCR.use_cassette('basic_search') do
+        result = subject.text_search("lorem ipsum")
 
-      result.must_be_instance_of Array
+        result.must_be_instance_of Array
+      end
+    end
+
+    it "includes the keyword text and relavence" do
+      VCR.use_cassette('basic_search') do
+        result = subject.text_search("lorem ipsum")[0]
+        [{"text"=>"lorem ipsum", "relevance"=>"0.993164"}]
+
+        result["text"].wont_be_nil
+        result["relevance"].wont_be_nil
+      end
     end
   end
 end
