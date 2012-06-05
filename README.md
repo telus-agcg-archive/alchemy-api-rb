@@ -18,13 +18,13 @@ Or install it yourself as:
 
 ## Usage
 
-Create a client instances with your API Key:
+Set your API Key in an initializer or something similar:
 
-    @client = AlchemyAPI::KeywordExtraction.new("xxxxxxxxxxxxxxxxxx")
+    AlchemyAPI.key = "xxxxxxxxxxxxxxxxxx"
 
 Request keyword extraction for a string of text:
 
-    results = @client.text_search("lorem ipsum")
+    results = AlchemyAPI.search(:keyword_extraction, :text => "hello world")
 
 Results are returned as a array of keywords extracted:
 
