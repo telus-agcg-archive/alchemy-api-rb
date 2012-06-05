@@ -16,10 +16,7 @@ module AlchemyAPI
     end
 
     def merged_options(params, opts = {})
-      params.dup.tap do |merged|
-        merged.merge!(opts)
-        merged.merge!(default_options)
-      end
+      params.merge(opts).merge(default_options)
     end
 
     private
