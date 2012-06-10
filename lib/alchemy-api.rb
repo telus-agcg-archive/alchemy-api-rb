@@ -14,6 +14,10 @@ module AlchemyAPI
     block_given? ? yield(Config) : Config
   end
 
+  def key=(value)
+    Config.apikey = value
+  end
+
   def self.search(mode, opts)
     klass = Config.modes[mode]
 
