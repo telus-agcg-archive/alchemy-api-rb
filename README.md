@@ -1,6 +1,6 @@
 # AlchemyAPI
 
-This is a ruby client library that provides access to the Alechemy text mining API. The initial version targets the keyword extraction api specificaly, with other implementations to follow.
+This is a Ruby Client Library that provides access to the Alchemy text mining API. The initial version targets the *keyword extraction* API specifically, with other implementations to follow.
 
 ## Installation
 
