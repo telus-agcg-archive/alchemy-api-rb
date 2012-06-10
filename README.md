@@ -50,6 +50,7 @@ Results are returned as a array of keywords extracted:
 
 1. Add support for HTML and Web searching
 2. Add additional Alchmey API search modes
+3. Add descriptive error messages
 
 ## Contributing
 
