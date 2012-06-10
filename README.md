@@ -33,7 +33,7 @@ Request keyword extraction for a string of text:
 
     results = AlchemyAPI.search(:keyword_extraction, :text => "hello world")
 
-Alternatively you may use a specific class:
+or
 
     results = AlchemyAPI::KeywordExtraction.search(:text => "hello world")
 
