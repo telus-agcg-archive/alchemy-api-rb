@@ -1,7 +1,9 @@
 module AlchemyAPI
   class KeywordExtraction < Base
-    def text_search(text, opts = {})
-      search(:text, { text: text }, opts)["keywords"]
+    Config.add_mode :keyword_extraction, self
+
+    def search(opts)
+      super(opts)["keywords"]
     end
 
     def web_method

@@ -2,21 +2,19 @@ require 'json/ext'
 require 'faraday'
 
 module AlchemyAPI
-  BASE_URL = "http://access.alchemyapi.com/calls/"
-
   class Base
-    def initialize(apikey)
-      @apikey = apikey
+    attr_accessor :options
+
+    def search(opts)
+      @options = opts
+
+      result = connection.post(path, construct_body)
+
+      JSON.parse(result.body)
     end
 
-    def default_options
-      {
-        outputMode: :json
-      }
-    end
-
-    def merged_options(params, opts = {})
-      params.merge(opts).merge(default_options)
+    def merged_options(opts)
+      opts.merge(Config.default_options)
     end
 
     private
@@ -25,28 +23,20 @@ module AlchemyAPI
       @connection ||= Faraday.new(url: BASE_URL)
     end
 
-    def apikey
-      @apikey
+    def mode
+      [:text, :url, :html].each do |type|
+        return type if options.keys.include?(type)
+      end
     end
 
-    def path(mode)
+    def path
       "#{mode}/#{web_method}"
     end
 
-    def search(mode, params, opts = {})
-      body = construct_body(params, opts)
+    def construct_body
+      body = { apikey: Config.apikey }.merge!(merged_options(options))
 
-      result = connection.post(path(mode), body)
-
-      JSON.parse(result.body)
-    end
-
-    def construct_body(params, opts = {})
-      "".tap do |body|
-        { apikey: @apikey }.merge!(merged_options(params, opts)).each do |k,v|
-          body << "#{k}=#{v}&"
-        end
-      end
+      body.map { |e| e.join('=') }.join('&')
     end
   end
 end

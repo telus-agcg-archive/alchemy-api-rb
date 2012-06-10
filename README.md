@@ -22,9 +22,20 @@ Set your API Key in an initializer or something similar:
 
     AlchemyAPI.key = "xxxxxxxxxxxxxxxxxx"
 
+You may set the key along with other config settings:
+
+    AlchemyAPI.configure do |config|
+      config.key = "xxxxxxxxxxxxxxxxxx"
+      config.output_mode = :xml
+    end
+
 Request keyword extraction for a string of text:
 
     results = AlchemyAPI.search(:keyword_extraction, :text => "hello world")
+
+Alternatively you may use a specific class:
+
+    results = AlchemyAPI::KeywordExtraction.search(:text => "hello world")
 
 Results are returned as a array of keywords extracted:
 
