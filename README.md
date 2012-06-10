@@ -46,6 +46,11 @@ Results are returned as a array of keywords extracted:
       }
     ]
 
+## TODO
+
+1. Add support for HTML and Web searching
+2. Add additional Alchmey API search modes
+
 ## Contributing
 
 1. Fork it
