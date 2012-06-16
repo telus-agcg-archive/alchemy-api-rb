@@ -14,7 +14,7 @@ describe AlchemyAPI do
     AlchemyAPI.key.must_be :==, key
   end
 
-  describe Config do
+  describe AlchemyAPI::Config do
     describe ".add_mode" do
       it "allows classes to register themselves" do
         class Foo
