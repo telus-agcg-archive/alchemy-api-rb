@@ -11,43 +11,36 @@ describe AlchemyAPI, "keyword_extraction" do
     -> { subject.web_method }.must_raise AlchemyAPI::MissingOptionsError
   end
 
+  # WTF?!?
+  # let(:searches) do
+  #   {
+  #     :text => "lorem ipsum",
+  #     :html => "<html><body>foo bar</body></html>"
+  #   }
+  # end
+
   describe "#search" do
-    describe "text search" do
-      it "returns an array of results" do
-        VCR.use_cassette('basic_text_search') do
-          result = subject.search(:text => "lorem ipsum")
+    {
+      :text => "lorem ipsum",
+      :html => "<html><body>foo bar</body></html>",
+      :url => "http://www.google.com"
+    }.each do |type,value|
+      describe "#{type} search" do
+        it "returns an array of results" do
+          VCR.use_cassette("basic_#{type}_search") do
+            result = subject.search(type => value)
 
-          result.must_be_instance_of Array
+            result.must_be_instance_of Array
+          end
         end
-      end
 
-      it "includes the keyword text and relavence" do
-        VCR.use_cassette('basic_text_search') do
-          result = subject.search(:text => "lorem ipsum")[0]
+        it "includes the keyword text and relavence" do
+          VCR.use_cassette("basic_#{type}_search") do
+            result = subject.search(type => value)[0]
 
-          result["text"].wont_be_nil
-          result["relevance"].wont_be_nil
-        end
-      end
-    end
-
-    describe "html search" do
-      let(:html) { "<html><body>foo bar</body></html>" }
-
-      it "returns an array of results" do
-        VCR.use_cassette('basic_html_search') do
-          result = subject.search(:html => html)
-
-          result.must_be_instance_of Array
-        end
-      end
-
-      it "includes the keyword text and relavence" do
-        VCR.use_cassette('basic_html_search') do
-          result = subject.search(:html => html)[0]
-
-          result["text"].wont_be_nil
-          result["relevance"].wont_be_nil
+            result["text"].wont_be_nil
+            result["relevance"].wont_be_nil
+          end
         end
       end
     end
