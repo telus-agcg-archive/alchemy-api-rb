@@ -1,4 +1,5 @@
 require 'json/ext'
+# require 'crack/xml'
 require 'faraday'
 
 module AlchemyAPI
@@ -16,7 +17,7 @@ module AlchemyAPI
     def parsed_response
       case Config.output_mode
       when :json
-        JSON.parse(@response.body)
+        JSON.parse(@response.body)[indexer]
       else
         # [Crack::XML.parse(@response.body)["results"]["keywords"]["keyword"]].flatten
       end
