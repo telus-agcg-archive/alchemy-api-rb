@@ -19,6 +19,12 @@ describe AlchemyAPI do
     end
 
     describe ".output_mode" do
+      after do
+        AlchemyAPI.configure do |config|
+          config.output_mode = :json
+        end
+      end
+
       it "allows output mode to be set" do
         AlchemyAPI.configure do |config|
           config.output_mode = :xml
