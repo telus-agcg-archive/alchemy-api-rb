@@ -3,14 +3,21 @@ require 'faraday'
 
 module AlchemyAPI
   class Base
-    attr_accessor :options
+    attr_accessor :options, :response
 
     def search(opts)
       @options = opts
 
-      result = connection.post(path, construct_body)
+      @response = connection.post(path, construct_body)
 
-      JSON.parse(result.body)
+      parsed_response
+    end
+
+    def parsed_response
+      case Config.output_mode
+      when :json
+        JSON.parse(@response.body)
+      end
     end
 
     def merged_options(opts)
