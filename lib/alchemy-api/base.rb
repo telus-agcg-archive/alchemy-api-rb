@@ -17,6 +17,8 @@ module AlchemyAPI
       case Config.output_mode
       when :json
         JSON.parse(@response.body)
+      else
+        # [Crack::XML.parse(@response.body)["results"]["keywords"]["keyword"]].flatten
       end
     end
 

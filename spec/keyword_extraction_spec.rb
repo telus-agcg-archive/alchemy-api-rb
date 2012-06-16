@@ -25,21 +25,27 @@ describe AlchemyAPI, "keyword_extraction" do
       :html => "<html><body>foo bar</body></html>",
       :url => "http://www.google.com"
     }.each do |type,value|
-      describe "#{type} search" do
-        it "returns an array of results" do
-          VCR.use_cassette("basic_#{type}_search") do
-            result = subject.search(type => value)
-
-            result.must_be_instance_of Array
-          end
+      [:json].each do |output_mode|
+        before do
+          AlchemyAPI::Config.output_mode = output_mode
         end
 
-        it "includes the keyword text and relavence" do
-          VCR.use_cassette("basic_#{type}_search") do
-            result = subject.search(type => value)[0]
+        describe "#{type} search with #{output_mode} results" do
+          it "returns an array of results" do
+            VCR.use_cassette("basic_#{type}_#{output_mode}_search") do
+              result = subject.search(type => value)
 
-            result["text"].wont_be_nil
-            result["relevance"].wont_be_nil
+              result.must_be_instance_of Array
+            end
+          end
+
+          it "includes the keyword text and relavence" do
+            VCR.use_cassette("basic_#{type}_#{output_mode}_search") do
+              result = subject.search(type => value)[0]
+
+              result["text"].wont_be_nil
+              result["relevance"].wont_be_nil
+            end
           end
         end
       end

@@ -15,10 +15,12 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = AlchemyAPI::VERSION
 
-  gem.add_dependency             'faraday',     '~> 0.8.1'
+  gem.add_dependency             'faraday',             '~> 0.8.1'
+  # gem.add_dependency             'crack',               '~> 0.3.1'
+  # gem.add_dependency             'faraday_middleware',  '~> 0.8.7'
 
-  gem.add_development_dependency 'rake',        '~> 0.9.2'
-  gem.add_development_dependency 'turn',        '~> 0.9.5'
-  gem.add_development_dependency 'vcr',         '~> 2.2.0'
-  gem.add_development_dependency 'fakeweb',     '~> 1.3.0'
+  gem.add_development_dependency 'rake',                '~> 0.9.2'
+  gem.add_development_dependency 'turn',                '~> 0.9.5'
+  gem.add_development_dependency 'vcr',                 '~> 2.2.0'
+  gem.add_development_dependency 'fakeweb',             '~> 1.3.0'
 end
