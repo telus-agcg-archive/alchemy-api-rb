@@ -21,9 +21,15 @@ module AlchemyAPI
   def self.search(mode, opts)
     klass = Config.modes[mode]
 
-    raise Exception unless Config.apikey
-    raise Exception unless klass
+    raise InvalidAPIKey.new unless Config.apikey
+    raise InvalidSearchMode.new unless klass
 
     klass.new.search(opts)
   end
+
+  class UnknownError < StandardError; end
+  class MissingOptionsError < StandardError; end
+  class InvalidAPIKey < StandardError; end
+  class InvalidSearchMode < StandardError; end
+  class InvalidOutputMode < StandardError; end
 end

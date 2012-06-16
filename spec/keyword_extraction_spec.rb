@@ -7,8 +7,8 @@ describe AlchemyAPI, "keyword_extraction" do
 
   subject() { AlchemyAPI::KeywordExtraction.new }
 
-  it "sets it's web method as expected" do
-    subject.web_method.must_be :==, "TextGetRankedKeywords"
+  it "requires options to be set that include search type" do
+    -> { subject.web_method }.must_raise AlchemyAPI::MissingOptionsError
   end
 
   describe "#search" do

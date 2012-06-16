@@ -32,7 +32,7 @@ describe AlchemyAPI do
           AlchemyAPI.configure do |config|
             config.output_mode = :xls
           end
-        }.must_raise Exception
+        }.must_raise AlchemyAPI::InvalidOutputMode
       end
     end
   end
@@ -43,13 +43,15 @@ describe AlchemyAPI do
 
       -> {
         AlchemyAPI.search(:keyword_extraction, :text => "foo")
-      }.must_raise Exception
+      }.must_raise AlchemyAPI::InvalidAPIKey
     end
 
     it "needs a valid mode" do
       AlchemyAPI::Config.apikey = "xxxxxxxxxxx"
 
-      -> { AlchemyAPI.search(:foo, :text => "hello") }.must_raise Exception
+      -> {
+        AlchemyAPI.search(:foo, :text => "hello")
+      }.must_raise AlchemyAPI::InvalidSearchMode
     end
   end
 end

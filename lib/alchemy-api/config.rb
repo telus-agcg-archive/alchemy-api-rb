@@ -22,7 +22,7 @@ module AlchemyAPI
     end
 
     def self.output_mode=(value)
-      raise Exception unless valid_output_modes.include?(value.to_s)
+      raise InvalidOutputMode.new unless valid_output_modes.include?(value.to_s)
 
       @output_mode = value
     end

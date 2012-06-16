@@ -24,9 +24,13 @@ module AlchemyAPI
     end
 
     def mode
+      raise MissingOptionsError.new unless options && options.keys
+
       [:text, :url, :html].each do |type|
         return type if options.keys.include?(type)
       end
+
+      raise MissionOptionsError.new
     end
 
     def path
