@@ -7,6 +7,10 @@ describe AlchemyAPI do
     AlchemyAPI::BASE_URL.must_be :==, "http://access.alchemyapi.com/calls/"
   end
 
+  it "allows you to set the key directly" do
+    AlchemyAPI.key = "xxxxxxxx"
+  end
+
   describe Config do
     describe ".add_mode" do
       it "allows classes to register themselves" do
