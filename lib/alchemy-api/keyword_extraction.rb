@@ -7,7 +7,7 @@ module AlchemyAPI
     end
 
     def web_method
-      "TextGetRankedKeywords"
+      "#{method_prefix}GetRankedKeywords"
     end
   end
 end

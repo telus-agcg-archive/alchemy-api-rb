@@ -33,6 +33,14 @@ module AlchemyAPI
       raise MissionOptionsError.new
     end
 
+    def method_prefix
+      case mode
+      when :text then "Text"
+      when :url then "URL"
+      when :html then "HTML"
+      end
+    end
+
     def path
       "#{mode}/#{web_method}"
     end
