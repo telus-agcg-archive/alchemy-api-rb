@@ -8,7 +8,10 @@ describe AlchemyAPI do
   end
 
   it "allows you to set the key directly" do
-    AlchemyAPI.key = "xxxxxxxx"
+    key = "xxxxxxxx"
+    AlchemyAPI.key = key
+
+    AlchemyAPI.key.must_be :==, key
   end
 
   describe Config do

@@ -14,6 +14,10 @@ module AlchemyAPI
     block_given? ? yield(Config) : Config
   end
 
+  def self.key
+    Config.apikey
+  end
+
   def self.key=(value)
     Config.apikey = value
   end
