@@ -1,6 +1,6 @@
 # AlchemyAPI
 
-This is a Ruby Client Library that provides access to the Alchemy text mining API. The initial version targets these  API's specifically, with other implementations to follow.
+This is a Ruby Client Library that provides access to the Alchemy text mining API. The initial version targets the following API's:
 
 * Keyword Extraction
 * Text Extraction
@@ -10,6 +10,12 @@ This is a Ruby Client Library that provides access to the Alchemy text mining AP
 * Text Categorization
 * Language Detection
 * Author Extraction
+
+Not yet implemented API's:
+
+* Content Scraping
+* Microformats
+* RSS / ATOM
 
 ## Installation
 
@@ -35,7 +41,7 @@ You may set the key along with other config settings:
 
     AlchemyAPI.configure do |config|
       config.key = "xxxxxxxxxxxxxxxxxx"
-      config.output_mode = :xml
+      config.output_mode = :xml # not yet supported
     end
 
 Request keyword extraction for a string of text:
@@ -44,9 +50,13 @@ Request keyword extraction for a string of text:
 
 or
 
-    results = AlchemyAPI::KeywordExtraction.search(:text => "hello world")
+    results = AlchemyAPI::KeywordExtraction.search(:url => "http://www.alchemyapi.com/")
 
-Results are returned as a array of keywords extracted:
+or
+
+    results = AlchemyAPI::KeywordExtraction.search(:html => "<html><body>lorem ipsum</body></html>")
+
+Results for keywor extraction are returned as a array of keywords:
 
     [
       {
@@ -57,8 +67,9 @@ Results are returned as a array of keywords extracted:
 
 ## TODO
 
-1. Add additional Alchmey API search modes
-2. Add support for raw output (JSON, XML and RDF)?
+1. Add missing Alchmey API search modes
+2. Add the ability to search all supported API's in a single request?
+3. Add support for raw output (JSON, XML and RDF)?
 
 ## Contributing
 
