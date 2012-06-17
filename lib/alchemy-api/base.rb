@@ -17,7 +17,8 @@ module AlchemyAPI
     def parsed_response
       case Config.output_mode
       when :json
-        JSON.parse(@response.body)[indexer]
+        parsed = JSON.parse(@response.body)
+        indexer ? parsed[indexer] : parsed
       else
         # [Crack::XML.parse(@response.body)["results"]["keywords"]["keyword"]].flatten
       end
