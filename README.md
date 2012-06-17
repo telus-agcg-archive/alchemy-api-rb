@@ -9,6 +9,7 @@ This is a Ruby Client Library that provides access to the Alchemy text mining AP
 * Concept Tagging
 * Text Categorization
 * Language Detection
+* Author Extraction
 
 ## Installation
 
