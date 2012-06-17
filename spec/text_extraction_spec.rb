@@ -7,9 +7,6 @@ describe AlchemyAPI, "text_extraction" do
 
   subject() { AlchemyAPI::TextExtraction.new }
 
-  it "requires options to be set that include search type" do
-    -> { subject.web_method }.must_raise AlchemyAPI::MissingOptionsError
-  end
   describe "#search" do
     {
       :html => "<html><body>foo bar</body></html>",

@@ -7,10 +7,6 @@ describe AlchemyAPI, "keyword_extraction" do
 
   subject() { AlchemyAPI::KeywordExtraction.new }
 
-  it "requires options to be set that include search type" do
-    -> { subject.web_method }.must_raise AlchemyAPI::MissingOptionsError
-  end
-
   # WTF?!?
   # let(:searches) do
   #   {

@@ -7,7 +7,7 @@ module AlchemyAPI
     attr_accessor :options, :response
 
     def search(opts)
-      @options = opts
+      check_options(opts)
 
       @response = connection.post(path, construct_body)
 
@@ -29,18 +29,30 @@ module AlchemyAPI
 
     private
 
+    def check_options(opts)
+      @options = opts
+
+      raise MissingOptionsError.new unless options && options.keys
+
+      unless supported_search_types.include?(mode)
+        raise UnsupportedSearchMode.new
+      end
+    end
+
     def connection
       @connection ||= Faraday.new(url: BASE_URL)
     end
 
-    def mode
-      raise MissingOptionsError.new unless options && options.keys
+    def supported_search_types
+      [:text, :url, :html]
+    end
 
+    def mode
       [:text, :url, :html].each do |type|
-        return type if options.keys.include?(type)
+        return type if options.keys && options.keys.include?(type)
       end
 
-      raise MissionOptionsError.new
+      raise MissingOptionsError.new
     end
 
     def method_prefix
