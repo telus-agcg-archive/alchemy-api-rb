@@ -1,5 +1,4 @@
 require 'json/ext'
-# require 'crack/xml'
 require 'faraday'
 
 module AlchemyAPI
@@ -19,8 +18,9 @@ module AlchemyAPI
       when :json
         parsed = JSON.parse(@response.body)
         indexer ? parsed[indexer] : parsed
-      else
-        # [Crack::XML.parse(@response.body)["results"]["keywords"]["keyword"]].flatten
+      when :xml
+      when :rdf
+        raise NotImplementedError.new
       end
     end
 
