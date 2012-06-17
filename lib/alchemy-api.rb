@@ -2,6 +2,7 @@ require "alchemy-api/version"
 require "alchemy-api/config"
 require "alchemy-api/base"
 require "alchemy-api/keyword_extraction"
+require "alchemy-api/text_extraction"
 
 module AlchemyAPI
   BASE_URL = "http://access.alchemyapi.com/calls/"
