@@ -5,6 +5,7 @@ require "alchemy-api/keyword_extraction"
 require "alchemy-api/text_extraction"
 require "alchemy-api/entity_extraction"
 require "alchemy-api/sentiment_analysis"
+require "alchemy-api/relation_extraction"
 
 module AlchemyAPI
   BASE_URL = "http://access.alchemyapi.com/calls/"
