@@ -8,6 +8,7 @@ require "alchemy-api/sentiment_analysis"
 require "alchemy-api/relation_extraction"
 require "alchemy-api/concept_tagging"
 require "alchemy-api/text_categorization"
+require "alchemy-api/language_detection"
 
 module AlchemyAPI
   BASE_URL = "http://access.alchemyapi.com/calls/"
