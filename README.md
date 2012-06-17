@@ -56,7 +56,7 @@ or
 
     results = AlchemyAPI::KeywordExtraction.search(:html => "<html><body>lorem ipsum</body></html>")
 
-Results for keywor extraction are returned as a array of keywords:
+Results for keyword extraction are returned as a array of keywords:
 
     [
       {
