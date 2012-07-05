@@ -1,6 +1,7 @@
 # AlchemyAPI
 
 [![Build Status](https://secure.travis-ci.org/technekes/alchemy-api-rb.png?branch=master)](http://travis-ci.org/technekes/alchemy-api-rb)
+[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/technekes/alchemy-api-rb)
 
 This is a Ruby Client Library that provides access to the Alchemy text mining API. The initial version targets the following API's:
 
