@@ -10,4 +10,5 @@ API_KEY = File.read('./.keys').chomp
 VCR.configure do |c|
   c.cassette_library_dir = 'spec/vcr_cassettes'
   c.hook_into :fakeweb
+  c.filter_sensitive_data("ALCHEMY_KEY") { API_KEY }
 end
