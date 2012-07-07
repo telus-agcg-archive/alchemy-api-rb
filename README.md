@@ -3,7 +3,7 @@
 [![Build Status](https://secure.travis-ci.org/technekes/alchemy-api-rb.png?branch=master)](http://travis-ci.org/technekes/alchemy-api-rb)
 [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/technekes/alchemy-api-rb)
 
-This is a Ruby Client Library that provides access to the Alchemy text mining API. The initial version targets the following API's:
+This is a Ruby Client Library that provides access to the [Alchemy text mining API](http://www.alchemyapi.com/). The current version targets the following API's:
 
 * Keyword Extraction
 * Text Extraction
@@ -36,6 +36,8 @@ Or install it yourself as:
 
 ## Usage
 
+You'll need to [request an API Key](http://www.alchemyapi.com/api/register.html).
+
 Set your API Key in an initializer or something similar:
 
     AlchemyAPI.key = "xxxxxxxxxxxxxxxxxx"
@@ -67,6 +69,12 @@ Results for keyword extraction are returned as a array of keywords:
         "relevance" => "0.993164"
       }
     ]
+
+## Testing
+
+The spec_helper is looking for your API Key in the project root in a file named `.keys`. Put just your key in there and then you can run:
+
+    rake test
 
 ## TODO
 
