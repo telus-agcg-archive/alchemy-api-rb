@@ -38,6 +38,10 @@ Or install it yourself as:
 
 You'll need to [request an API Key](http://www.alchemyapi.com/api/register.html).
 
+Bundler does not appear to be auto-loading the gem [issue #2](https://github.com/technekes/alchemy-api-rb/issues/2) so you'll have to require it manually somewhere:
+
+    require 'alchemy-api'
+
 Set your API Key in an initializer or something similar:
 
     AlchemyAPI.key = "xxxxxxxxxxxxxxxxxx"
