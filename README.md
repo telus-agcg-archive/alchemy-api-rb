@@ -55,11 +55,11 @@ Request keyword extraction for a string of text:
 
 or
 
-    results = AlchemyAPI::KeywordExtraction.search(:url => "http://www.alchemyapi.com/")
+    results = AlchemyAPI::KeywordExtraction.new.search(:url => "http://www.alchemyapi.com/")
 
 or
 
-    results = AlchemyAPI::KeywordExtraction.search(:html => "<html><body>lorem ipsum</body></html>")
+    results = AlchemyAPI::KeywordExtraction.new.search(:html => "<html><body>lorem ipsum</body></html>")
 
 Results for keyword extraction are returned as a array of keywords:
 
