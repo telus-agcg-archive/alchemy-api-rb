@@ -45,7 +45,7 @@ Set your API Key in an initializer or something similar:
 You may set the key along with other config settings:
 
     AlchemyAPI.configure do |config|
-      config.key = "xxxxxxxxxxxxxxxxxx"
+      config.apikey = "xxxxxxxxxxxxxxxxxx"
       config.output_mode = :xml # not yet supported
     end
 
