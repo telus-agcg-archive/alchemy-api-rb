@@ -7,6 +7,7 @@ Gem::Specification.new do |gem|
   gem.description   = %q{Provides access to the Alchemy text mining API - http://www.alchemyapi.com/}
   gem.summary       = %q{This is a ruby client library that provides access to the Alechemy text mining API. The initial version targets the keyword extraction api specificaly, with other implementations to follow.}
   gem.homepage      = "https://github.com/technekes/alchemy-api-rb"
+  gem.license       = "MIT"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
