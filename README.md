@@ -8,6 +8,7 @@ This is a Ruby Client Library that provides access to the [Alchemy text mining A
 * Keyword Extraction
 * Text Extraction
 * Entity Extraction
+* Relation Extraction
 * Sentiment Analysis
 * Concept Tagging
 * Text Categorization
