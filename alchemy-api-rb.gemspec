@@ -20,6 +20,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency             'excon',               '~> 0.28.0'
 
   gem.add_development_dependency 'minitest',            '~> 3.1.0'
+  gem.add_development_dependency 'pry',                 '~> 0.9.0'
   gem.add_development_dependency 'rake',                '~> 0.9.2'
   gem.add_development_dependency 'turn',                '~> 0.9.5'
   gem.add_development_dependency 'vcr',                 '~> 2.2.0'
