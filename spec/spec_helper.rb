@@ -2,6 +2,7 @@ require 'minitest/spec'
 require 'minitest/autorun'
 require 'turn/autorun'
 require 'vcr'
+require 'pry'
 
 require File.expand_path(File.join(File.dirname(__FILE__), '../lib/alchemy_api'))
 

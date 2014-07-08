@@ -41,7 +41,9 @@ module AlchemyAPI
     end
 
     def connection
-      @connection ||= Faraday.new(url: BASE_URL)
+      @connection ||= Faraday.new(url: BASE_URL) do |builder|
+        builder.adapter :excon
+      end
     end
 
     def supported_search_types
