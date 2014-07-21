@@ -10,6 +10,7 @@ require "alchemy-api/concept_tagging"
 require "alchemy-api/text_categorization"
 require "alchemy-api/language_detection"
 require "alchemy-api/author_extraction"
+require "alchemy-api/taxonomy"
 
 Faraday.default_adapter = :excon
 
