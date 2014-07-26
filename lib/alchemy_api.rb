@@ -12,6 +12,7 @@ require "alchemy-api/text_categorization"
 require "alchemy-api/language_detection"
 require "alchemy-api/author_extraction"
 require "alchemy-api/taxonomy"
+require "alchemy-api/image_tagging"
 
 module AlchemyAPI
   BASE_URL = "http://access.alchemyapi.com/calls/"
