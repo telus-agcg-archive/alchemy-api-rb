@@ -14,6 +14,7 @@ This is a Ruby Client Library that provides access to the [Alchemy text mining A
 * Text Categorization
 * Language Detection
 * Author Extraction
+* Image Tagging
 
 Not yet implemented API's:
 
@@ -94,4 +95,3 @@ The spec_helper is looking for your API Key in the project root in a file named 
 ## License
 
 MIT License. See LICENSE for details.
-
