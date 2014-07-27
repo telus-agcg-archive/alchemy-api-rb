@@ -1,6 +1,7 @@
 require 'minitest/spec'
 require 'minitest/autorun'
 require 'turn/autorun'
+require 'webmock/minitest'
 require 'vcr'
 require 'pry'
 require 'codeclimate-test-reporter'
@@ -15,6 +16,6 @@ API_KEY = ENV['ALCHEMY_API_KEY']
 
 VCR.configure do |c|
   c.cassette_library_dir = 'spec/vcr_cassettes'
-  c.hook_into :fakeweb
+  c.hook_into :webmock
   c.filter_sensitive_data("ALCHEMY_KEY") { API_KEY }
 end
