@@ -75,7 +75,11 @@ Results for keyword extraction are returned as a array of keywords:
 
 The specs are expecting your API Key as an environment variable named `ALCHEMY_API_KEY`. You can export it locally or prepend the test command like so:
 
-    ALCHEMY_API_KEY="this-is-my-40-character-key" rake test
+    ALCHEMY_API_KEY="this-is-my-40-character-key" bundle exec rake test
+
+If you would like to expirement with the API you can run the `console` rake task and use the commands above to set the API Key issue search commands:
+
+    bundle exec rake console
 
 ## TODO
 
