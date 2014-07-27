@@ -3,6 +3,9 @@ require 'minitest/autorun'
 require 'turn/autorun'
 require 'vcr'
 require 'pry'
+require 'codeclimate-test-reporter'
+
+CodeClimate::TestReporter.start
 
 require File.expand_path(File.join(File.dirname(__FILE__), '../lib/alchemy_api'))
 

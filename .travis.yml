@@ -4,3 +4,6 @@ rvm:
 env:
   global:
     secure: CubibQsfHYol2AlaplZH5Q1AiGJY/tn9pR9A06xrK28YQc4TLeEE4vrzntBiMd7UrgHjJ07gDshSF5muoCpLscuC0sK7LqHVA62iPYuIiK+9gd6+OPgnJ+3Rw5MMJLuboHkPwKHIMgCArtg+xPCHASxt4eK59wny80d9b7ifnnw=
+addons:
+  code_climate:
+    repo_token: 412bc15e5c0d57c3381d70da56b468979f649edc02f3078f697d8f66334b3fc5
