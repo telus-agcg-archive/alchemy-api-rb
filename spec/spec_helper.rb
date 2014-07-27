@@ -4,8 +4,10 @@ require 'turn/autorun'
 require 'vcr'
 require 'pry'
 require 'codeclimate-test-reporter'
+require 'coveralls'
 
 CodeClimate::TestReporter.start
+Coveralls.wear!
 
 require File.expand_path(File.join(File.dirname(__FILE__), '../lib/alchemy_api'))
 
