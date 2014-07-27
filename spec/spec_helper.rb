@@ -1,6 +1,6 @@
 require 'minitest/spec'
 require 'minitest/autorun'
-require 'turn/autorun'
+require 'minitest/reporters'
 require 'webmock/minitest'
 require 'vcr'
 require 'pry'
@@ -9,6 +9,7 @@ require 'coveralls'
 
 CodeClimate::TestReporter.start
 Coveralls.wear!
+Minitest::Reporters.use!(Minitest::Reporters::SpecReporter.new)
 
 require File.expand_path(File.join(File.dirname(__FILE__), '../lib/alchemy_api'))
 

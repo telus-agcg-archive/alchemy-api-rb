@@ -19,10 +19,10 @@ Gem::Specification.new do |gem|
   gem.add_dependency             'faraday',             '~> 0.8.x'
   gem.add_dependency             'excon',               '~> 0.28.x'
 
-  gem.add_development_dependency 'minitest',            '~> 3.1.x'
+  gem.add_development_dependency 'minitest',            '~> 5.4.x'
   gem.add_development_dependency 'pry',                 '~> 0.10.x'
   gem.add_development_dependency 'rake',                '~> 10.3.x'
-  gem.add_development_dependency 'turn',                '~> 0.9.x'
+  gem.add_development_dependency 'minitest-reporters',  '~> 1.0.x'
   gem.add_development_dependency 'vcr',                 '~> 2.3.x'
   gem.add_development_dependency 'webmock',             '~> 1.18.x'
   gem.add_development_dependency 'coveralls',           '~> 0.7.x'
