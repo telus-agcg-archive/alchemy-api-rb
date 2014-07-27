@@ -14,6 +14,7 @@ This is a Ruby Client Library that provides access to the [Alchemy text mining A
 * Text Categorization
 * Language Detection
 * Author Extraction
+* Image Tagging
 
 Not yet implemented API's:
 
@@ -98,4 +99,3 @@ If you would like to expirement with the API you can run the `console` rake task
 ## License
 
 MIT License. See LICENSE for details.
-
