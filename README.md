@@ -73,9 +73,9 @@ Results for keyword extraction are returned as a array of keywords:
 
 ## Testing
 
-The spec_helper is looking for your API Key in the project root in a file named `.keys`. Put just your key in there and then you can run:
+The specs are expecting your API Key as an environment variable named `ALCHEMY_API_KEY`. You can export it locally or prepend the test command like so:
 
-    rake test
+    ALCHEMY_API_KEY="this-is-my-40-character-key" rake test
 
 ## TODO
 

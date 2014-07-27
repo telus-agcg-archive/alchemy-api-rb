@@ -6,7 +6,7 @@ require 'pry'
 
 require File.expand_path(File.join(File.dirname(__FILE__), '../lib/alchemy_api'))
 
-API_KEY = File.read('./.keys').chomp
+API_KEY = ENV['ALCHEMY_API_KEY']
 
 VCR.configure do |c|
   c.cassette_library_dir = 'spec/vcr_cassettes'
