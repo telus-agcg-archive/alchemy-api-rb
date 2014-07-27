@@ -2,6 +2,8 @@
 
 [![Build Status](https://secure.travis-ci.org/technekes/alchemy-api-rb.png?branch=master)](http://travis-ci.org/technekes/alchemy-api-rb)
 [![Code Climate](https://codeclimate.com/github/technekes/alchemy-api-rb.png)](https://codeclimate.com/github/technekes/alchemy-api-rb)
+[![Dependency Status](https://gemnasium.com/connexio-labs/omniauth-connexio.png)](https://gemnasium.com/connexio-labs/omniauth-connexio)
+[![Gem Version](https://badge.fury.io/rb/alchemy-api-rb.png)](http://badge.fury.io/rb/alchemy-api-rb)
 
 This is a Ruby Client Library that provides access to the [Alchemy text mining API](http://www.alchemyapi.com/). The current version targets the following API's:
 
