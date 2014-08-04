@@ -63,7 +63,7 @@ describe AlchemyAPI do
       AlchemyAPI::Config.apikey = "xxxxxxxxxxx"
 
       -> {
-        AlchemyAPI.search(:foo, :text => "hello")
+        AlchemyAPI.search(:bar, :text => "hello")
       }.must_raise AlchemyAPI::InvalidSearchMode
     end
   end
