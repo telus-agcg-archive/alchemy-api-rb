@@ -3,7 +3,7 @@ module AlchemyAPI
     Config.add_mode :url_get_targeted_sentiment, self
 
     def web_method
-      "#{method_prefix}GetRankedKeywords"
+      "#{method_prefix}URLGetTargetedSentiment"
     end
 
     private
