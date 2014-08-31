@@ -13,7 +13,7 @@ module AlchemyAPI
     end
 
     def indexer
-      "title"
+      'title'
     end
   end
 end

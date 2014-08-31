@@ -13,7 +13,7 @@ module AlchemyAPI
 
     def self.default_options
       {
-        :outputMode => output_mode
+        outputMode: output_mode
       }
     end
 
@@ -22,13 +22,13 @@ module AlchemyAPI
     end
 
     def self.output_mode=(value)
-      raise InvalidOutputMode.new unless valid_output_modes.include?(value.to_s)
+      fail InvalidOutputMode unless valid_output_modes.include?(value.to_s)
 
       @output_mode = value
     end
 
     def self.valid_output_modes
-      ["xml", "json", "rdf", "rel-tag", "rel-tag-raw"]
+      ['xml', 'json', 'rdf', 'rel-tag', 'rel-tag-raw']
     end
   end
 end

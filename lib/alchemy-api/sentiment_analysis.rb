@@ -9,8 +9,7 @@ module AlchemyAPI
     private
 
     def indexer
-      "docSentiment"
+      'docSentiment'
     end
   end
 end
-

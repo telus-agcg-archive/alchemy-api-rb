@@ -59,21 +59,21 @@ You may set the key along with other config settings:
 
 Request keyword extraction for a string of text:
 
-    results = AlchemyAPI.search(:keyword_extraction, :text => "hello world")
+    results = AlchemyAPI.search(:keyword_extraction, text: "hello world")
 
 or
 
-    results = AlchemyAPI::KeywordExtraction.new.search(:url => "http://www.alchemyapi.com/")
+    results = AlchemyAPI::KeywordExtraction.new.search(url: 'http://www.alchemyapi.com/')
 
 or
 
-    results = AlchemyAPI::KeywordExtraction.new.search(:html => "<html><body>lorem ipsum</body></html>")
+    results = AlchemyAPI::KeywordExtraction.new.search(html: "<html><body>lorem ipsum</body></html>")
 
 Results for keyword extraction are returned as a array of keywords:
 
     [
       {
-             "text" => "lorem ipsum",
+             "text" => 'lorem ipsum',
         "relevance" => "0.993164"
       }
     ]

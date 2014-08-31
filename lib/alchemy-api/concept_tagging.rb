@@ -9,8 +9,7 @@ module AlchemyAPI
     private
 
     def indexer
-      "concepts"
+      'concepts'
     end
   end
 end
-

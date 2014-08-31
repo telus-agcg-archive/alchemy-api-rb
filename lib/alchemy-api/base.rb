@@ -20,7 +20,7 @@ module AlchemyAPI
         indexer ? parsed[indexer] : parsed
       when :xml
       when :rdf
-        raise NotImplementedError.new
+        fail NotImplementedError
       end
     end
 
@@ -33,11 +33,8 @@ module AlchemyAPI
     def check_options(opts)
       @options = opts
 
-      raise MissingOptionsError.new unless options && options.keys
-
-      unless supported_search_types.include?(mode)
-        raise UnsupportedSearchMode.new
-      end
+      fail MissingOptionsError unless options && options.keys
+      fail UnsupportedSearchMode unless supported_search_types.include?(mode)
     end
 
     def connection
@@ -55,14 +52,14 @@ module AlchemyAPI
         return type if options.keys && options.keys.include?(type)
       end
 
-      raise MissingOptionsError.new
+      fail MissingOptionsError
     end
 
     def method_prefix
       case mode
-      when :text then "Text"
-      when :url then "URL"
-      when :html then "HTML"
+      when :text then 'Text'
+      when :url  then 'URL'
+      when :html then 'HTML'
       end
     end
 
@@ -77,4 +74,3 @@ module AlchemyAPI
     end
   end
 end
-

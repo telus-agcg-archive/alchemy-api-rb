@@ -9,8 +9,7 @@ module AlchemyAPI
     private
 
     def indexer
-      "taxonomy"
+      'taxonomy'
     end
   end
 end
-

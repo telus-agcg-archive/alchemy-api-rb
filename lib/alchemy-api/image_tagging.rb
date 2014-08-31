@@ -13,7 +13,7 @@ module AlchemyAPI
     end
 
     def indexer
-      "imageKeywords"
+      'imageKeywords'
     end
   end
 end

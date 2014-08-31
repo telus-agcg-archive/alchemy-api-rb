@@ -9,7 +9,7 @@ module AlchemyAPI
     private
 
     def indexer
-      "entities"
+      'entities'
     end
   end
 end

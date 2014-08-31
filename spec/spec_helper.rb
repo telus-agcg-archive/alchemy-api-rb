@@ -11,12 +11,13 @@ CodeClimate::TestReporter.start
 Coveralls.wear!
 Minitest::Reporters.use!(Minitest::Reporters::SpecReporter.new)
 
-require File.expand_path(File.join(File.dirname(__FILE__), '../lib/alchemy_api'))
+files = File.join(File.dirname(__FILE__), '../lib/alchemy_api')
+require File.expand_path(files)
 
 API_KEY = ENV['ALCHEMY_API_KEY']
 
 VCR.configure do |c|
   c.cassette_library_dir = 'spec/vcr_cassettes'
   c.hook_into :webmock
-  c.filter_sensitive_data("ALCHEMY_KEY") { API_KEY }
+  c.filter_sensitive_data('ALCHEMY_KEY') { API_KEY }
 end

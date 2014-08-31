@@ -13,7 +13,7 @@ module AlchemyAPI
     end
 
     def indexer
-      "text"
+      'text'
     end
   end
 end

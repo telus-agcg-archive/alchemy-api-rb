@@ -18,4 +18,3 @@ module AlchemyAPI
     end
   end
 end
-

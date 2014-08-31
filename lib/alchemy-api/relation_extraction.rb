@@ -9,8 +9,7 @@ module AlchemyAPI
     private
 
     def indexer
-      "relations"
+      'relations'
     end
   end
 end
-
