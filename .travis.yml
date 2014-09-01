@@ -1,7 +1,5 @@
 language: ruby
 
-script: "bundle exec rubocop -c .rubocop.yml && bundle exec rake test"
-
 cache: bundler
 
 rvm:
