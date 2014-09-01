@@ -1,6 +1,7 @@
 AllCops:
   Exclude:
     - alchemy-api-rb.gemspec
+    - vendor/**/*
 
 Documentation:
   # don't require classes to be documented
