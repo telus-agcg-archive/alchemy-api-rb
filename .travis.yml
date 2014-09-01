@@ -17,3 +17,7 @@ env:
 addons:
   code_climate:
     repo_token: 412bc15e5c0d57c3381d70da56b468979f649edc02f3078f697d8f66334b3fc5
+
+matrix:
+  allow_failures:
+    - rbx-2.2.10
