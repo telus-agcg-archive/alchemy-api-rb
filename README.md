@@ -32,7 +32,9 @@ Not yet implemented API's:
 
 Add this line to your application's Gemfile:
 
-    gem 'alchemy-api-rb', :require => 'alchemy_api'
+```ruby
+gem 'alchemy-api-rb', :require => 'alchemy_api'
+```
 
 And then execute:
 
@@ -48,35 +50,47 @@ You'll need to [request an API Key](http://www.alchemyapi.com/api/register.html)
 
 Set your API Key in an initializer or something similar:
 
-    AlchemyAPI.key = "xxxxxxxxxxxxxxxxxx"
+```ruby
+AlchemyAPI.key = "xxxxxxxxxxxxxxxxxx"
+```
 
 You may set the key along with other config settings:
 
-    AlchemyAPI.configure do |config|
-      config.apikey = "xxxxxxxxxxxxxxxxxx"
-      config.output_mode = :xml # not yet supported
-    end
+```ruby
+AlchemyAPI.configure do |config|
+  config.apikey = "xxxxxxxxxxxxxxxxxx"
+  config.output_mode = :xml # not yet supported
+end
+```
 
 Request keyword extraction for a string of text:
 
-    results = AlchemyAPI.search(:keyword_extraction, text: "hello world")
+```ruby
+results = AlchemyAPI.search(:keyword_extraction, text: "hello world")
+```
 
 or
 
-    results = AlchemyAPI::KeywordExtraction.new.search(url: 'http://www.alchemyapi.com/')
+```ruby
+results = AlchemyAPI::KeywordExtraction.new.search(url: 'http://www.alchemyapi.com/')
+```
 
 or
 
-    results = AlchemyAPI::KeywordExtraction.new.search(html: "<html><body>lorem ipsum</body></html>")
+```ruby
+results = AlchemyAPI::KeywordExtraction.new.search(html: "<html><body>lorem ipsum</body></html>")
+```
 
 Results for keyword extraction are returned as a array of keywords:
 
-    [
-      {
-             "text" => 'lorem ipsum',
-        "relevance" => "0.993164"
-      }
-    ]
+```ruby
+[
+  {
+         "text" => 'lorem ipsum',
+    "relevance" => "0.993164"
+  }
+]
+```
 
 ## Testing
 
