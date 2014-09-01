@@ -1,5 +1,5 @@
 AllCops:
-  Excludes:
+  Exclude:
     - alchemy-api-rb.gemspec
 
 Documentation:
