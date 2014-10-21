@@ -10,7 +10,11 @@ describe AlchemyAPI::Base do
 
     describe '#adapter' do
       it 'uses the excon adapter' do
-        subject.send(:connection).builder.handlers.must_include Faraday::Adapter::Excon
+        subject
+          .send(:connection)
+          .builder
+          .handlers
+          .must_include Faraday::Adapter::Excon
       end
     end
   end
