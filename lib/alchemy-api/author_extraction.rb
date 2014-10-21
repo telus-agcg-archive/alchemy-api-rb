@@ -13,7 +13,7 @@ module AlchemyAPI
     end
 
     def indexer
-      nil
+      'author'
     end
   end
 end
