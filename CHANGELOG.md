@@ -1,6 +1,11 @@
 # Next Release
 
 * Your contribution here.
+
+# 0.5.0 (10/26/2014)
+
+#### Features
+
 * [#15](https://github.com/technekes/alchemy-api-rb/pull/15): Author extraction now returns a String (like title extraction) instead of a Hash - [@reshleman](https://github.com/reshleman).
 
 # 0.4.0 (08/31/2014)
