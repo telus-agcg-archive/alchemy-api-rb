@@ -17,7 +17,7 @@ Gem::Specification.new do |gem|
   gem.version       = AlchemyAPI::VERSION
 
   gem.add_dependency             'faraday',             '~> 0.8.0'
-  gem.add_dependency             'excon',               '~> 0.28.0'
+  gem.add_dependency             'excon',               '~> 0.28'
 
   gem.add_development_dependency 'minitest',            '~> 5.4.0'
   gem.add_development_dependency 'pry',                 '~> 0.10.0'
