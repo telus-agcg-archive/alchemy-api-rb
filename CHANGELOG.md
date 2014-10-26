@@ -2,6 +2,12 @@
 
 * Your contribution here.
 
+# 0.5.1 (10/26/2014)
+
+#### Changes
+
+* [#15](https://github.com/technekes/alchemy-api-rb/pull/17): Relax excon dependency - [@manuelmeurer](https://github.com/manuelmeurer).
+
 # 0.5.0 (10/26/2014)
 
 #### Features
