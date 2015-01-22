@@ -2,11 +2,17 @@
 
 * Your contribution here.
 
+# 0.5.2 (01/27/2015)
+
+#### Changes
+
+* [#19](https://github.com/technekes/alchemy-api-rb/pull/19): Update dependency on faraday to 0.9.x - [@kenjudy](https://github.com/kenjudy).
+
 # 0.5.1 (10/26/2014)
 
 #### Changes
 
-* [#15](https://github.com/technekes/alchemy-api-rb/pull/17): Relax excon dependency - [@manuelmeurer](https://github.com/manuelmeurer).
+* [#17](https://github.com/technekes/alchemy-api-rb/pull/17): Relax excon dependency - [@manuelmeurer](https://github.com/manuelmeurer).
 
 # 0.5.0 (10/26/2014)
 
