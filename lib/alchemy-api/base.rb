@@ -7,8 +7,9 @@ module AlchemyAPI
 
     def search(opts)
       check_options(opts)
+      body = { apikey: Config.apikey }.merge!(merged_options(options))
 
-      @response = connection.post(path, construct_body)
+      @response = connection.post(path, body)
 
       parsed_response
     end
@@ -39,6 +40,7 @@ module AlchemyAPI
 
     def connection
       @connection ||= Faraday.new(url: BASE_URL) do |builder|
+        builder.request :url_encoded
         builder.adapter :excon
       end
     end
@@ -65,12 +67,6 @@ module AlchemyAPI
 
     def path
       "#{mode}/#{web_method}"
-    end
-
-    def construct_body
-      body = { apikey: Config.apikey }.merge!(merged_options(options))
-
-      body.map { |e| e.join('=') }.join('&')
     end
   end
 end

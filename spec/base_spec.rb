@@ -16,6 +16,14 @@ describe AlchemyAPI::Base do
           .handlers
           .must_include Faraday::Adapter::Excon
       end
+
+      it 'form-encodes POST parameters' do
+        subject
+          .send(:connection)
+          .builder
+          .handlers
+          .must_include Faraday::Request::UrlEncoded
+      end
     end
   end
 
