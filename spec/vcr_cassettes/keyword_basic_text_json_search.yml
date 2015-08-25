@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://access.alchemyapi.com/calls/text/TextGetRankedKeywords
+    uri: https://access.alchemyapi.com/calls/text/TextGetRankedKeywords
     body:
       encoding: US-ASCII
       string: apikey=ALCHEMY_KEY&text=lorem ipsum&outputMode=json

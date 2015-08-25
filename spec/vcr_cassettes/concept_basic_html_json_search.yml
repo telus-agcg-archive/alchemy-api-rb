@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://access.alchemyapi.com/calls/html/HTMLGetRankedConcepts
+    uri: https://access.alchemyapi.com/calls/html/HTMLGetRankedConcepts
     body:
       encoding: US-ASCII
       string: apikey=ALCHEMY_KEY&html=<html><body>Google is a large company</body></html>&outputMode=json

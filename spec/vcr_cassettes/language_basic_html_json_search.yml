@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://access.alchemyapi.com/calls/html/HTMLGetLanguage
+    uri: https://access.alchemyapi.com/calls/html/HTMLGetLanguage
     body:
       encoding: US-ASCII
       string: apikey=ALCHEMY_KEY&html=<html><body>Lorem ipsum dolor sit amet.</body></html>&outputMode=json

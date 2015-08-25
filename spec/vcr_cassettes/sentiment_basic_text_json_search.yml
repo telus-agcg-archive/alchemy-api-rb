@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://access.alchemyapi.com/calls/text/TextGetTextSentiment
+    uri: https://access.alchemyapi.com/calls/text/TextGetTextSentiment
     body:
       encoding: US-ASCII
       string: apikey=ALCHEMY_KEY&text=Alchemy is cool&outputMode=json
