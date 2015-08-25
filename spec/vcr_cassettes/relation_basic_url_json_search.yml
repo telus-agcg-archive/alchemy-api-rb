@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://access.alchemyapi.com/calls/url/URLGetRelations
+    uri: https://access.alchemyapi.com/calls/url/URLGetRelations
     body:
       encoding: US-ASCII
       string: apikey=ALCHEMY_KEY&url=http://www.alchemy.com&outputMode=json

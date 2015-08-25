@@ -3,8 +3,8 @@ require File.expand_path(File.join(File.dirname(__FILE__), 'spec_helper'))
 describe AlchemyAPI do
   subject { AlchemyAPI }
 
-  it 'knows the alchemy api url' do
-    AlchemyAPI::BASE_URL.must_be :==, 'http://access.alchemyapi.com/calls/'
+  it 'knows the secure alchemy api url' do
+    AlchemyAPI::BASE_URL.must_be :==, 'https://access.alchemyapi.com/calls/'
   end
 
   it 'allows you to set the key directly' do

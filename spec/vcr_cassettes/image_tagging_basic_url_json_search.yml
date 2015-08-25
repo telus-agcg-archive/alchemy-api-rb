@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://access.alchemyapi.com/calls/url/URLGetRankedImageKeywords
+    uri: https://access.alchemyapi.com/calls/url/URLGetRankedImageKeywords
     body:
       encoding: US-ASCII
       string: apikey=ALCHEMY_KEY&url=http://demo1.alchemyapi.com/images/vision/emaxfpo.jpg&outputMode=json

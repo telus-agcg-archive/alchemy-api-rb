@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://access.alchemyapi.com/calls/html/HTMLGetRankedKeywords
+    uri: https://access.alchemyapi.com/calls/html/HTMLGetRankedKeywords
     body:
       encoding: US-ASCII
       string: apikey=ALCHEMY_KEY&html=<html><body>foo bar</body></html>&outputMode=json
