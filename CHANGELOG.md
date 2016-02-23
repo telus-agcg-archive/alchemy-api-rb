@@ -2,6 +2,12 @@
 
 * Your contribution here.
 
+# 0.6.0 (02/22/2016)
+
+#### Changes
+
+* [#22](https://github.com/technekes/alchemy-api-rb/pull/22): Add face detection API - [@hayesgm](https://github.com/hayesgm).
+
 # 0.5.2 (01/27/2015)
 
 #### Changes

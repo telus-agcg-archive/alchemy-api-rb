@@ -21,6 +21,7 @@ This is a Ruby Client Library that provides access to the [Alchemy text mining A
 * Author Extraction
 * Taxonomy
 * Image Tagging
+* Face Detection/Recognition
 
 Not yet implemented API's:
 
