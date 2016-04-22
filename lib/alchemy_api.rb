@@ -15,6 +15,7 @@ require 'alchemy-api/language_detection'
 require 'alchemy-api/author_extraction'
 require 'alchemy-api/taxonomy'
 require 'alchemy-api/image_tagging'
+require 'alchemy-api/combined_call'
 
 module AlchemyAPI
   BASE_URL = 'https://access.alchemyapi.com/calls/'
