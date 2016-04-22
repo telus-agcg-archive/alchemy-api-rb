@@ -8,20 +8,21 @@
 
 This is a Ruby Client Library that provides access to the [Alchemy text mining API](http://www.alchemyapi.com/). The current version targets the following API's:
 
-* Keyword Extraction
-* Text Extraction
-* Title Extraction
+* Author Extraction
+* Combined Call
+* Concept Tagging
 * Entity Extraction
+* Face Detection/Recognition
+* Image Tagging
+* Keyword Extraction
+* Language Detection
+* Relation Extraction
 * Sentiment Analysis
 * Targeted Sentiment Analysis
-* Relation Extraction
-* Concept Tagging
-* Text Categorization
-* Language Detection
-* Author Extraction
 * Taxonomy
-* Image Tagging
-* Face Detection/Recognition
+* Text Categorization
+* Text Extraction
+* Title Extraction
 
 Not yet implemented API's:
 

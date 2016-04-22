@@ -2,6 +2,12 @@
 
 * Your contribution here.
 
+# 0.7.0 (04/22/2016)
+
+### Changes
+
+* [#23](https://github.com/technekes/alchemy-api-rb/pull/23): Add support for combined call endpoint - [@jsullivan](https://github.com/jsullivan).
+
 # 0.6.0 (02/22/2016)
 
 #### Changes
