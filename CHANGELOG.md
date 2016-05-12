@@ -1,6 +1,6 @@
 # Next Release
 
-* Your contribution here.
+* Add support for image scene text extraction endpoint - [@sciamp](https://github.com/sciamp)
 
 # 0.7.0 (04/22/2016)
 
@@ -49,4 +49,3 @@
 #### Fixes
 
 * [#9](https://github.com/technekes/alchemy-api-rb/pull/9): Set excon adapter on faraday initialization - [@AdamFerguson](https://github.com/AdamFerguson).
-
