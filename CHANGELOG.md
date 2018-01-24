@@ -1,6 +1,7 @@
 # Next Release
 
 * Add support for emotion analysis endpoint - [@sciamp](https://github.com/sciamp)
+* Add support for image scene text extraction endpoint - [@sciamp](https://github.com/sciamp)
 
 # 0.7.0 (04/22/2016)
 
