@@ -1,7 +1,11 @@
 # Next Release
 
-* Add support for emotion analysis endpoint - [@sciamp](https://github.com/sciamp)
-* Add support for image scene text extraction endpoint - [@sciamp](https://github.com/sciamp)
+* Your contribution here.
+
+# 0.8.0 (01/24/2018)
+
+* [#26](https://github.com/technekes/alchemy-api-rb/pull/26): Add support for image scene text extraction endpoint - [@sciamp](https://github.com/sciamp)
+* [#25](https://github.com/technekes/alchemy-api-rb/pull/25): Add support for emotion analysis endpoint - [@sciamp](https://github.com/sciamp)
 
 # 0.7.0 (04/22/2016)
 
