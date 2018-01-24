@@ -6,7 +6,7 @@ module AlchemyAPI
     end
 
     def self.add_mode(key, klass)
-      @modes = {} unless @modes
+      @modes ||= {}
 
       @modes[key] = klass
     end
@@ -22,7 +22,7 @@ module AlchemyAPI
     end
 
     def self.output_mode=(value)
-      fail InvalidOutputMode unless valid_output_modes.include?(value.to_s)
+      raise InvalidOutputMode unless valid_output_modes.include?(value.to_s)
 
       @output_mode = value
     end

@@ -10,7 +10,7 @@ module AlchemyAPI
 
     def supported_search_types
       # TODO: fix html
-      [:text, :url]
+      %i(text url)
     end
 
     def indexer
