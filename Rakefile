@@ -1,11 +1,10 @@
-#!/usr/bin/env rake
 require 'bundler/gem_tasks'
 require 'rake/testtask'
 require 'rubocop/rake_task'
 
 RuboCop::RakeTask.new(:rubocop)
 
-task default: [:rubocop, :test]
+task default: %i(rubocop test)
 
 Rake::TestTask.new do |t|
   t.libs.push 'lib'

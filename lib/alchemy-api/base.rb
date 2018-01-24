@@ -19,9 +19,8 @@ module AlchemyAPI
       when :json
         parsed = JSON.parse(@response.body)
         indexer ? parsed[indexer] : parsed
-      when :xml
-      when :rdf
-        fail NotImplementedError
+      when :rdf, :xml
+        raise NotImplementedError
       end
     end
 
@@ -34,8 +33,8 @@ module AlchemyAPI
     def check_options(opts)
       @options = opts
 
-      fail MissingOptionsError unless options && options.keys
-      fail UnsupportedSearchMode unless supported_search_types.include?(mode)
+      raise MissingOptionsError unless options && options.keys
+      raise UnsupportedSearchMode unless supported_search_types.include?(mode)
     end
 
     def connection
@@ -46,15 +45,15 @@ module AlchemyAPI
     end
 
     def supported_search_types
-      [:text, :url, :html]
+      %i(text url html)
     end
 
     def mode
-      [:text, :url, :html].each do |type|
+      %i(text url html).each do |type|
         return type if options.keys && options.keys.include?(type)
       end
 
-      fail MissingOptionsError
+      raise MissingOptionsError
     end
 
     def method_prefix

@@ -1,4 +1,5 @@
 AllCops:
+  TargetRubyVersion: 2.2
   Exclude:
     - alchemy-api-rb.gemspec
     - vendor/**/*
@@ -11,7 +12,80 @@ Encoding:
   # no need to always specify encoding
   Enabled: false
 
-LineLength:
-  # just one more character please
-  Max: 80
+Style/NumericPredicate:
+  # The following is a false positive for specs:
+  #
+  #   "Use be.positive? instead of be > 0."
+  Exclude:
+    - 'spec/**/*'
 
+Metrics/BlockLength:
+  # Certain DSL use blocks and can be lengthy
+  Exclude:
+    - 'spec/**/*'
+    - 'alchemy-api-rb.gemspec'
+
+AlignParameters:
+  # allow for multi-line methods to have normal indentation.
+  # for example:
+  #
+  # Person.where(
+  #   first_name: 'tom',
+  #   last_name: 'foolery'
+  # )
+  EnforcedStyle: with_fixed_indentation
+
+Layout/AlignParameters:
+  # allow for end of if to be aligned with a variable.
+  # for example:
+  #
+  # foo = if a == b
+  #   'bar'
+  # else
+  #   'baz'
+  # end
+  EnforcedStyle: with_fixed_indentation
+
+Layout/MultilineMethodCallIndentation:
+  # allow for multi-line method chaining to have normal indentation.
+  # for example:
+  #
+  # Person
+  #   .where(first_name: 'tom')
+  #   .not(last_name: 'foolery')
+  EnforcedStyle: indented
+
+Style/RaiseArgs:
+  Enabled: false
+
+Lint/EndAlignment:
+  EnforcedStyleAlignWith: variable
+
+ClassAndModuleChildren:
+  # ok to use compact style when modules are predefined.
+  # for example the following is fine so long as we're sure that
+  # module MDB has already been required/defined.
+  #
+  # class MDB::Person; end
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/ParallelAssignment:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: true
+
+Metrics/MethodLength:
+  Enabled: false
+
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    default: ()
+    "%i": ()
+    "%w": ()
+
+Style/FormatString:
+  Enabled: false

@@ -20,7 +20,7 @@ require 'alchemy-api/emotion_analysis'
 require 'alchemy-api/image_scene_text'
 
 module AlchemyAPI
-  BASE_URL = 'https://access.alchemyapi.com/calls/'
+  BASE_URL = 'https://access.alchemyapi.com/calls/'.freeze
 
   def self.config
     Config
@@ -41,8 +41,8 @@ module AlchemyAPI
   def self.search(mode, opts)
     klass = Config.modes[mode]
 
-    fail InvalidAPIKey unless Config.apikey
-    fail InvalidSearchMode unless klass
+    raise InvalidAPIKey unless Config.apikey
+    raise InvalidSearchMode unless klass
 
     klass.new.search(opts)
   end
