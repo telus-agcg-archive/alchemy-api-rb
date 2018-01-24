@@ -4,10 +4,8 @@ require 'minitest/reporters'
 require 'webmock/minitest'
 require 'vcr'
 require 'pry'
-require 'codeclimate-test-reporter'
 require 'coveralls'
 
-CodeClimate::TestReporter.start
 Coveralls.wear!
 Minitest::Reporters.use!(Minitest::Reporters::SpecReporter.new)
 
