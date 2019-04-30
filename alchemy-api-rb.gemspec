@@ -28,5 +28,5 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'vcr',                 '~> 2.9.2'
   gem.add_development_dependency 'webmock',             '~> 3.3.0'
   gem.add_development_dependency 'coveralls',           '~> 0.7.0'
-  gem.add_development_dependency 'rubocop',             '~> 0.52.1'
+  gem.add_development_dependency 'rubocop',             '~> 0.68.0'
 end
