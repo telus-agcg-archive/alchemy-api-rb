@@ -26,7 +26,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'rake',                '~> 10.3.0'
   gem.add_development_dependency 'minitest-reporters',  '~> 1.0.0'
   gem.add_development_dependency 'vcr',                 '~> 2.9.2'
-  gem.add_development_dependency 'webmock',             '~> 3.3.0'
+  gem.add_development_dependency 'webmock',             '~> 3.7.0'
   gem.add_development_dependency 'coveralls',           '~> 0.7.0'
   gem.add_development_dependency 'rubocop',             '~> 0.52.1'
 end
