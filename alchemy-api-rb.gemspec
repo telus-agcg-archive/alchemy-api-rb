@@ -21,7 +21,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency             'faraday',             '~> 0.9.0'
   gem.add_dependency             'excon',               '~> 0.28'
 
-  gem.add_development_dependency 'minitest',            '~> 5.4.0'
+  gem.add_development_dependency 'minitest',            '~> 5.12.0'
   gem.add_development_dependency 'pry',                 '~> 0.10.0'
   gem.add_development_dependency 'rake',                '~> 10.3.0'
   gem.add_development_dependency 'minitest-reporters',  '~> 1.0.0'
